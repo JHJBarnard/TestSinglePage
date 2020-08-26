@@ -1,18 +1,40 @@
 <html>
   <title>
-    First website
+    
   </title>
   
   <body>
-    <h1>This is my first github page</h1>
+      <script>
+          window.detect_browser = (text) => {
+
+              var platform = navigator.platform;
+
+              // platform is a string. Check for "IPhone", "linux" for mobile platforms
+              lowerPlat = platform.toLowerCase();
+
+              if (lowerPlat.includes("iphone")){
+
+                window.location.replace("https://apps.apple.com/us/app/skrmiish-esports/id1489311557?ls=1");
+
+              } else if (lowerPlat.includes("linux")){
+
+                window.location.replace("http://play.google.com/store/apps/details?id=com.skrmiishesports.skrmiish");
+
+              } else {
+
+                window.location.replace("https://skrmiishesports.com/");
+
+              }
+
+              return platform;
+          };
+          window.print = (text) => {
+            console.log("JSInterop Log:\t"+text);
+          };
+      </script>
   </body>
   
   <style>
-    body {
-      background-color:green;
-      color:#fff;
-      text-align:center;
-    }
   </style>
   
 </html>
