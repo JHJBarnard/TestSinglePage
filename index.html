@@ -3,9 +3,10 @@
     
   </title>
   
-  <body>
+  <body onload="myFunction()">
       <script>
-          window.detect_browser = (text) => {
+        function myFunction() {
+          
 
               var platform = navigator.platform;
 
@@ -26,11 +27,9 @@
 
               }
 
-              return platform;
-          };
-          window.print = (text) => {
-            console.log("JSInterop Log:\t"+text);
-          };
+          
+          
+        }
       </script>
   </body>
   
